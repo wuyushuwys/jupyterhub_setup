@@ -223,5 +223,47 @@ sudo systemctl restart nginx.service
 
 Once you have setup JupyterHub and Nginx proxy as described, you can browse to your JupyterHub IP or URL (e.g. if your server IP address is 123.456.789.1 and you decided to host JupyterHub at the /jupyter URL, browse to 123.456.789.1/jupyter). You will find a login page where you enter your Linux username and password. On login you will be presented with the JupyterLab interface, with the file browser pane showing the contents of your users’ home directory on the server.
 
-
 ### For more information, please visit [Official Document](https://jupyterhub.readthedocs.io/)
+
+
+
+## Troubleshooting
+
+### Troubleshooting Command
+
+Using this command below to get all debug info
+
+```bash
+<your-path-jupyterhub-venv>/bin/jupyterhub troubleshooting
+```
+
+After editing configuration, remenber to restart system service
+
+```bash
+sudo systemclt restart jupyterhub.service
+```
+
+### Spawn Failed
+
+If you have error like
+
+```
+Spawn failed: Server at http://127.0.0.1:35990/user/username/ didn't respond in 30 seconds
+```
+
+It normally happen if you have jupyter in your server before. Simply remove the folder ` .jupyter`in your home folder will solve this problem.
+
+```bash
+rm -rf ~/.jupyter
+```
+
+Other options such as kill `configurable-http-proxy` and change configure file are not working in test.
+
+### Update database
+
+If you change any user profile in configuration file. Remember to update user database
+
+```bash
+<your-path-jupyterhub-venv>/bin/python -m jupyterhub update-db
+```
+
