@@ -26,7 +26,7 @@ sudo apt autoclean
 sudo apt install -f
 sudo apt autoremove
 sudo apt install curl
-curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash - #  nodejs 12.X for jupyterlab-git
 sudo apt-get install -y nodejs
 curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 sudo apt-get update && sudo apt-get install yarn
@@ -263,8 +263,9 @@ sudo /opt/jupyterhub/bin/python3 -m pip install jupyterlab-system-monitor       
 sudo /opt/jupyterhub/bin/python3 -m pip install jupyterlab-code-snippets                # code snippets
 sudo /opt/jupyterhub/bin/python3 -m pip install jupyterlab_execute_time                 # jupyterlab execute time
 sudo /opt/jupyterhub/bin/python3 -m pip install jupyter-resource-usage                  # resource-usage
+sudo /opt/jupyterhub/bin/python3 -m pip install jupyterlab-python-file                  # python-file
 
-sudo /opt/jupyterhub/bin/python3 -m pip install --upgrade jupyterlab jupyterlab-git     # jupyterlab-git
+sudo /opt/jupyterhub/bin/python3 -m pip install --upgrade jupyterlab-git     # jupyterlab-git
 
 # Reload system service and test
 echo "Reload system service and test"
