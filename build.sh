@@ -265,7 +265,7 @@ sudo /opt/jupyterhub/bin/python3 -m pip install jupyterlab_execute_time         
 sudo /opt/jupyterhub/bin/python3 -m pip install jupyter-resource-usage                  # resource-usage
 sudo /opt/jupyterhub/bin/python3 -m pip install jupyterlab-python-file                  # python-file
 
-sudo /opt/jupyterhub/bin/python3 -m pip install --upgrade jupyterlab-git     # jupyterlab-git
+# sudo /opt/jupyterhub/bin/python3 -m pip install --upgrade jupyterlab-git     # jupyterlab-git
 
 # Reload system service and test
 echo "Reload system service and test"
