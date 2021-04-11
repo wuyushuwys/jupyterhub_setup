@@ -242,16 +242,15 @@ sudo nginx -t
 
 # Install Jupyterlab extension
 echo "Install jupyter extension"
-sudo /opt/jupyterhub/bin/python3 -m pip install jupyterlab-python-file \                 # python file
-                                                ipympl \                                 # matplotlib
-                                                jupyterlab-topbar \                      # topbar
-                                                jupyterlab_theme_hale \                  # hale theme
-                                                jupyterlab_theme_solarized_dark \        # solarized_dark 
-                                                jupyterlab-system-monitor \              # system monitor
-                                                jupyterlab-code-snippets \               # code snippets
-                                                jupyterlab_execute_time \                # jupyterlab execute time
-                                                jupyter-resource-usage \                 # resource-usage
-                                                nbdime                                   # nbdime
+sudo /opt/jupyterhub/bin/python3 -m pip install ipympl                                  # matplotlib
+sudo /opt/jupyterhub/bin/python3 -m pip install jupyterlab-topbar                       # topbar
+sudo /opt/jupyterhub/bin/python3 -m pip install jupyterlab_theme_hale                   # hale theme
+sudo /opt/jupyterhub/bin/python3 -m pip install jupyterlab_theme_solarized_dark         # solarized_dark 
+sudo /opt/jupyterhub/bin/python3 -m pip install jupyterlab-system-monitor               # system monitor
+sudo /opt/jupyterhub/bin/python3 -m pip install jupyterlab-code-snippets                # code snippets
+sudo /opt/jupyterhub/bin/python3 -m pip install jupyterlab_execute_time                 # jupyterlab execute time
+sudo /opt/jupyterhub/bin/python3 -m pip install jupyter-resource-usage                  # resource-usage
+
 sudo /opt/jupyterhub/bin/python3 -m pip install --upgrade jupyterlab jupyterlab-git     # jupyterlab-git
 
 # Reload system service and test
@@ -263,15 +262,6 @@ sudo systemctl status jupyterhub.service
 sudo systemctl restart nginx.service
 
 echo "#### Finish ####"
-# sudo /opt/jupyterhub/bin/python3 -m pip install ipympl                                  # matplotlib
-# sudo /opt/jupyterhub/bin/python3 -m pip install jupyterlab-topbar                       # topbar
-# sudo /opt/jupyterhub/bin/python3 -m pip install jupyterlab_theme_hale                   # hale theme
-# sudo /opt/jupyterhub/bin/python3 -m pip install jupyterlab_theme_solarized_dark         # solarized_dark 
-# sudo /opt/jupyterhub/bin/python3 -m pip install jupyterlab-system-monitor               # system monitor
-# sudo /opt/jupyterhub/bin/python3 -m pip install jupyterlab-code-snippets                # code snippets
-# sudo /opt/jupyterhub/bin/python3 -m pip install jupyterlab_execute_time                 # jupyterlab execute time
-# sudo /opt/jupyterhub/bin/python3 -m pip install --upgrade jupyterlab jupyterlab-git     # jupyterlab-git
-# sudo /opt/jupyterhub/bin/python3 -m pip install jupyter-resource-usage                  # resource-usage
 
 
                                                 
