@@ -15,8 +15,21 @@ sudo /opt/jupyterhub/bin/python3 -m pip install jupyterhub jupyterlab
 sudo /opt/jupyterhub/bin/python3 -m pip install ipywidgets
 sudo /opt/jupyterhub/bin/python3 -m pip install jupyterhub-idle-culler
 
-
-sudo apt install nodejs npm
+# sudo apt-get update
+# sudo apt-get install nodejs-dev node-gyp libssl1.0-dev
+# sudo apt install nodejs npm
+# Install npm & configurable-http-proxy
+echo "Install npm configurable-http-proxy"
+sudo apt remove --purge nodejs npm
+sudo apt clean
+sudo apt autoclean
+sudo apt install -f
+sudo apt autoremove
+sudo apt install curl
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+sudo apt-get install -y nodejs
+curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+sudo apt-get update && sudo apt-get install yarn
 sudo npm install -g configurable-http-proxy
 
 # Create the configuration for Jupyterhub
