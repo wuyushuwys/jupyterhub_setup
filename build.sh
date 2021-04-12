@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# sudo permission checker
+if [ "$EUID" -ne 0 ]
+  then echo "Please run as root"
+  exit
+fi
+
 # Install pip3 and virtualenv
 echo "Install pip3 and virtualenv"
 sudo apt install python3-pip
