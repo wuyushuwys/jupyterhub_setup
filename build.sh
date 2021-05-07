@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 # sudo permission checker
 if [ "$EUID" -ne 0 ]
   then echo "Please run as root"
