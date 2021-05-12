@@ -10,9 +10,9 @@ fi
 
 # Install pip3 and virtualenv
 echo "Install pip3 and virtualenv"
-sudo apt install python3-pip
+sudo apt install python3-pip -y
 # sudo python3 -m pip install virtualenv
-sudo apt-get install python3-venv
+sudo apt-get install python3-venv -y
 
 # Install jupyterhub
 echo "Install jupyterhub"
@@ -33,11 +33,11 @@ sudo apt clean
 sudo apt autoclean
 sudo apt install -f
 sudo apt autoremove
-sudo apt install curl
+sudo apt install curl -y
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash - #  nodejs 12.X for jupyterlab-git
 sudo apt-get install -y nodejs
 curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-sudo apt-get update && sudo apt-get install yarn
+sudo apt-get update && sudo apt-get install yarn -y
 sudo npm install -g configurable-http-proxy
 
 # Create the configuration for Jupyterhub
@@ -110,7 +110,7 @@ sudo ln -s /opt/jupyterhub/etc/systemd/jupyterhub.service /etc/systemd/system/ju
 
 # Setting up a reverse proxy by Nginx
 echo "Setting up a reverse proxy by Nginx"
-sudo apt install nginx
+sudo apt install nginx -y
 
 sudo mkdir -p /etc/nginx/ssl
 
