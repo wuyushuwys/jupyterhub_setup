@@ -272,6 +272,11 @@ sudo /opt/jupyterhub/bin/python3 -m pip install jupyterlab-code-snippets        
 sudo /opt/jupyterhub/bin/python3 -m pip install jupyterlab_execute_time                 # jupyterlab execute time
 sudo /opt/jupyterhub/bin/python3 -m pip install jupyter-resource-usage                  # resource-usage
 sudo /opt/jupyterhub/bin/python3 -m pip install jupyterlab-python-file                  # python-file
+sudo /opt/jupyterhub/bin/python3 -m pip install tensorflow                              # tensorflow
+# Tensorboard jupyterlab 
+sudo /opt/jupyterhub/bin/python3 -m pip install git+https://github.com/cliffwoolley/jupyter_tensorboard.git
+sudo /opt/jupyterhub/bin/python3 -m pip install git+https://github.com/chaoleili/jupyterlab_tensorboard.git
+sudo /opt/jupyterhub/bin/python3 -m jupyter tensorboard enable --user
 
 # sudo /opt/jupyterhub/bin/python3 -m pip install --upgrade jupyterlab-git     # jupyterlab-git
 
