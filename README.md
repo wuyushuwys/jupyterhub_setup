@@ -258,6 +258,11 @@ It normally happen if you have jupyter in your server before. Simply remove the 
 rm -rf ~/.jupyter
 ```
 
+if you get log in systemctl status like `PermissionError: [Errno 13] Permission denied: `, try
+```bash
+ sudo chown -R user:user ~/.local/share/jupyter 
+ ```
+
 Other options such as kill `configurable-http-proxy` and change configure file are not working in test.
 
 ### Update database
