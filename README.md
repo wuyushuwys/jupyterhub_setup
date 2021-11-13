@@ -260,7 +260,7 @@ rm -rf ~/.jupyter
 
 if you get log in systemctl status like `PermissionError: [Errno 13] Permission denied: `, try
 ```bash
- sudo chown -R user:user ~/.local/share/jupyter 
+ sudo chown -R $USER:$USER ~/.local/share/jupyter 
  ```
 
 Other options such as kill `configurable-http-proxy` and change configure file are not working in test.
